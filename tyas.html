@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>I'm Sorry Aditi ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #fad0c4);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animated gradient */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating hearts */
+.heart-bg {
+    position: absolute;
+    bottom: -50px;
+    font-size: 24px;
+    animation: floatUp linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+
+/* Card */
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 520px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+h1 {
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.heart {
+    font-size: 40px;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.25);}
+    100% {transform: scale(1);}
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: none;
+    background: #ff4d6d;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff1f4b;
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts generator -->
+<script>
+for (let i = 0; i < 25; i++) {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.className = "heart-bg";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+    heart.style.fontSize = (16 + Math.random() * 20) + "px";
+    document.body.appendChild(heart);
+}
+</script>
+
+<div class="card">
+    <div class="heart">❤️</div>
+
+    <h1>I'm Really Sorry, Aditi</h1>
+
+    <p>
+        I am really really really sorry for lying.  
+        I know I was wrong for hiding it and lying about it.  
+        You didn’t deserve that, not even a little.  
+    </p>
+
+    <p>
+        I promise nothing like this will ever happen again — EVER.  
+        You mean too much to me to lose over my mistake.  
+    </p>
+
+    <p>
+        Please maan jao… I LOVE YOU SOOOOOOOOOOOO MUCH ❤️😚  
+    </p>
+
+    <button onclick="alert('I promise to be better. Please forgive me ❤️')">
+        Tap if you still love me 🥺
+    </button>
+</div>
+
+</body>
+</html>
